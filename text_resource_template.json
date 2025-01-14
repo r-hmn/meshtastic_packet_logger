@@ -1,0 +1,15 @@
+{
+  "MY_ID"      : "!aaaaaa",
+  "MY_HOSTNAME": "192.168.0.0",
+
+  "message.newnode"            : "Beepboop. Hi. Nice to meet you",
+
+  "message.morninggreeting"    : "Goodmorning",
+  "message.afternoongreeting"  : "Goodafternoon",
+  "message.helloagain<24h"     : "BeepBoop. {greeting}",
+  "message.helloagain>=24h"    : "BeepBoop. Hi, long time.. ({ago_hours} hours)",
+
+  "message.rangetest"          : "BeepBoop. Hi, i received your Range-Test message: {text}",
+  "message.pingmessage"        : "BeepBoop. Back at ya: {text}"
+
+}

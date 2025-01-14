@@ -1,0 +1,21 @@
+.sendMessage("meshtastic.log.line", line=line, interface=self)
+
+.sendMessage("meshtastic.connection.lost", interface=self)
+
+.sendMessage("meshtastic.connection.established", interface=self)
+                
+.sendMessage("meshtastic.node.updated", node=node, interface=self)
+                
+sendMessage("meshtastic.mqttclientproxymessage", proxymessage=fromRadio.mqttClientProxyMessage, interface=self)
+
+.sendMessage("meshtastic.xmodempacket", packet=fromRadio.xmodemPacket, interface=self)
+
+1)
+    topic = "meshtastic.receive"
+2)
+    topic = f"meshtastic.receive.data.{portnum}"
+3)
+    handler = protocols.get(portNumInt)
+    topic = f"meshtastic.receive.{handler.name}"
+    
+.sendMessage(topic, packet=asDict, interface=self)
